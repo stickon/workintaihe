@@ -1,0 +1,406 @@
+1#中文
+2#English
+3#Language
+4#Search Device
+5#Login
+6#Loading...
+7#The user name or password can not be empty
+8#Searching...
+9#Make sure your phone and device are on the same LAN
+10#Login failed
+11#No machine under this account
+12#The machine has been controlled
+13#Home
+14#Sense
+15#Device List
+16#Info
+17#Settings
+18#Valve
+19#Feeding
+20#Is the last page
+21#Cleaning settings
+22#Cleaning
+23#Feeding settings
+24#Cleaning
+25#System is on
+26#System off
+27#Change ...
+28#Failed to start
+29#Color
+30#Shape
+31#Smart
+32#Front view
+33#Rear view
+34#Layer
+35#On
+36#Off
+37#Length
+38#Width
+39#Defect Size
+40#Size setting
+41#Chute
+42#Wave
+43#Front Same as Rear
+44#Current Mode
+45#Lightness(L)
+46#Color
+47#red
+48#blue
+49#green
+50#Size Settings
+51#Single
+52#With Left
+53#With Right
+54#With Left and Right
+55#Ejector Combine Model
+56#Ejector Activate Time
+57#Delay Time
+58#Blowing Time
+59#Blowing Style
+60#Center limit
+61#Style
+62#Version Information
+63#Basic Version
+64#Sort Version
+65#Camera Version
+66#IR Camera Version
+67#Display board
+68#Control board
+69#Led board
+70#Pedrail
+71#Feed Sensor
+72#ARM
+73#FPGA
+74#Hardware
+75#Front
+76#Rear
+77#Soft
+78#Convert board
+79#Deashing Cycle(min)
+80#Wiping Delay(s)
+81#Deashing Time(s)
+82#Deashing 1
+83#Deashing 2
+84#Open valve when Deashing
+85#Close valve when Deashing
+86#Feeder In Close
+87#Feeder In Open
+88#Feeder Out Close
+89#Feeder Out Open
+90#Mode List
+91#Read Success
+92#Read Failed
+93#Please Close Machine!
+94#Apply
+95#Setting
+96#Signal settings
+97#Phone Data Control
+98#Anolog Gain
+99#Digital Gain
+100#All Adjust
+101#RGB Background
+102#Light
+103#CCD Gain
+104#IR
+105#Front IR  main light on
+106#Front IR  main light off
+107#Rear IR  main light on
+108#Rear IR  main light off
+109#On front infrared wave
+110#Off front infrared wave
+111#On rear infrared wave
+112#Off rear infrared wave
+113#Apply
+114#Front And Rear
+115#Shape
+116#Dark Defect Upper Limit
+117#Dark Defect Lower Limit
+118#Light Defect Upper Limit
+119#Light Defect Lower Limit
+120#Chromatic Sensitivity
+121#Brightness Limit
+122#Dark
+123#Region
+124#Light Defect Upper Limit
+125#Light Defect Lower Limit
+126#Setting Successed
+127#Setting Failed
+128#Save current settings?
+129#Save Current Parameters to the Mode?
+130#OK
+131#Cancel
+132#Down Pedrail Off
+133#Down Pedrail On
+134#Top Pedrail Off
+135#Top Pedrail On
+136#Pedrail Off
+137#Pedrail On
+138#Save
+139#Top
+140#Down
+141#Middle
+142#Layer
+143#Current Speed
+144#Set speed
+145#Pedrail Settings
+146#Max
+147#Min
+148#Camera
+149#Ejector Frequecy
+150#Press again and you can quit the application
+151#The language switch failure,switch to the default of China
+152#Received flow
+153#Send flow
+154#Total traffic flow
+155#None
+156#Tieguanyin
+157#DaHongPao Tear
+158#Red tea
+159#Sri Lanka black tea
+160#Cashew
+161#Corn
+162#Peanut bud
+163#Wheat
+164#Rice
+165#Sunflower seeds
+166#Wolfberry
+167#Green tea
+168#Peanut
+169#Rice Shape
+170#Standard Shape Sorting
+171#General Tea
+172#Licorice
+173#Horsebean
+174#Optical Calibration
+175#Visible algorithm
+176#Invisible algorithm
+177#IR Gray Upper
+178#IR Gray Lower
+179#IR Ratio
+180#1st
+181#2nd/trd
+182#Reject Positive Sample
+183#Reject Negative Sample
+184#Defect Ratio
+185#Warning
+186#Do you want to save the current settings?
+187#CCD Adjust
+188#Detail
+189#Compressed
+190#Wave Average
+191#Brightness Gaps
+192#Raw
+193#Calibrated
+194#Test
+195#IR Calibration
+196#Optical Calibration
+197#Dark elec_leve calibration
+198#Calibration Device Placed?
+199#Calibrate Failed
+200#Calibrate Success
+201#Average value below the Lower limit
+202#Bright Spots Existing
+203#Grey Spot Existing
+204#Unknown error
+205#Saved successfully
+206#Save failed
+207#Configuration file error
+208#Control board communication exception, can not start
+209#Abnormal pressure, can not start
+210#Input value is less than the minimum value
+211#Input value greater than the maximum value
+212#Press again to exit
+213#Equipment
+214#is offline
+215#Signal is unstable or the device is offline
+216#Sorry, the device is unstable, exiting the current device
+217#Connection has been disconnected, need to re login
+218#Connection timed out, please try again
+219#Network is unstable, please log in again
+220#Load Language Success
+221#Time share LED board
+222#The Software will quit if you pressed again
+223#The network is connected.
+224#No Network!
+225#Do you want to read the parameters of this pattern?
+226#Ratio
+227#Spot
+228#Min Spot
+229#Defect Ratio
+230#Online Update
+231#Local Login
+232#Remote Login
+233#Device Number
+234#Register
+235#loginTextField
+236#Password
+237#Confirm
+238#The password for the two time is inconsistent
+239#You are not registered yet. Please register first
+240#Load language failed
+241#The protocol does not match. Please check to see if the version is consistent
+242#Device not online
+243#The device number cannot be null
+244#Prompt
+245#Finished
+246#Find new version
+247#Canceled
+248#The application is downloading
+249#register was successful
+250#The user has been registered
+251#Incorrect loginTextField or password
+252#Registration requires the binding of SIM cards. Please make sure the SIM card is valid
+253#The phone is not certified
+254#new
+255#Find new language pack, please update it in time
+256#no found file
+257#Apk file does not exist
+258#User Edition
+259#Engineer Edition
+260#The latest version
+261#You are not registered yet
+262#User data error
+263#Authorization code
+264#Authorization code can not be empty
+265#Light Limit
+266#Preferences
+267#Gray Threshold
+268#Area Selection
+269#Lower Limit
+270#Upper Limit
+271#Edge Enable
+272#Edge Disable
+273#Selection of rice
+274#Selected length rice
+275#Dust limit
+276#Lightness
+277#Size
+278#Thickness
+279#Fat Stem
+280#Thin Stem
+281#Enable Thick
+282#Enable Thin
+283#Disable thickness
+284#Reject stem
+285#Enable long
+286#Enable short
+287#Disable length
+288#Min length
+289#Area
+290#Enable Big
+291#Enable small
+292#Max Spot
+293#Boundary width
+294#Dark
+295#Brightness limit
+296#First Sensitivity
+297#Second Sensitivity
+298#Surface Limited On
+299#Surface Limited Off
+300#Disable area
+301#Length
+302#Area
+303#Thickness
+304#Detection information
+305#Working hours statistics
+306#This boot free time
+307#This boot work time
+308#Total work time
+309#h
+310#This boot time
+311#Valve Settings
+312#The setting value must not be lower than the dust limit
+313#The setting value is no higher than the sensitivity
+314#The value set cannot be higher than the maximum spot
+315#The set value must not be less than the minimum spot
+316#Authorization code error
+317#Feed Out
+318#Feed In
+319#Network instability, reconnection...
+320#Row 1 & Chute
+321#Layer 1 & Pedrail
+322#Row 2 & Chute
+323#Layer 2 & Pedrail
+324#Sort Tea
+325#Row 3 & Chute
+326#Row 4 & Chute
+327#Machine Type
+328#Please check network available
+329#Connect Success
+330#Click again to exit the interface
+331#First
+332#Second
+333#Feed Value
+334#Status
+335#Long time no use, forced offline
+336#Scheme setting
+337#Mode
+338#HSV
+339#Translating
+340#Start
+341#Finish
+342#V
+343#S
+344#H
+345#Thin Number
+346#Rough Ratio
+347#Area Size
+348#Restrain
+349#Strip Sensitivity
+350#Circular Sensitivity
+351#Light Color
+352#Intermediate Color
+353#Angle
+354#Assist
+355#Brightness Sensitivity
+356#Brightness Size
+357#Brightness Off
+358#Brightness On
+359#Thickness Off
+360#Thickness On
+361#Evenness
+362#Large Area Off
+363#Large Area On
+364#Small Area Off
+365#Small Area On
+366#The screen version is old and the protocol does not match. To be able to use the mobile phone properly, please update the screen in time.
+367#Please check whether the storage is available
+368#On
+369#Off
+370#Please enter the device number in the correct format
+371#Mobile phone protocol version is too old, some of the functions may not be used, the upgrade version is under development, please be patient.
+372#Group
+376#Machine protocol version
+377#Mobile protocol version
+378#compatible
+379#incompatible
+380#Row
+381#Column
+382#Min bad pixels
+383#Surface Limited Sense
+384#Let your friend scan be downloaded
+385#Qr code APP
+386#Mirror
+387#Rice sharpen
+388#Mirror Parameter
+389#Sharpen
+391#Sharpen Parameter
+392#The language pack has been updated, so let's update it!
+393#Front Top
+394#Front Middle
+395#Front Down
+396#Rear Down
+397#Row 1
+398#Row 2
+399#Sorry, the page can't be found!
+1000#Back
+1001#Disconnect
+1002#change
+1003#IR  main light
+1004#infrared wave
+1005#download
+1006#Valve is on
+1007#Valve is off
+1010#Light Upper Limit
+1011#Light Lower Limit
+1012#Logs

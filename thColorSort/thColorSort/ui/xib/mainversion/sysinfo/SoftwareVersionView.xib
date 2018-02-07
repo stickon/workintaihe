@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SoftwareVersionView">
+            <connections>
+                <outlet property="currentLayerLabel" destination="ptU-Tq-REd" id="Btl-yD-Fok"/>
+                <outlet property="currentLayerLabelHeightConstraint" destination="FOb-T5-45E" id="azH-3r-Xcy"/>
+                <outlet property="tableView" destination="AsA-jw-kkh" id="KeO-td-ThT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ptU-Tq-REd">
+                    <rect key="frame" x="10" y="0.0" width="365" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="FOb-T5-45E"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.64313725489999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AsA-jw-kkh">
+                    <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AsA-jw-kkh" secondAttribute="bottom" id="8gb-A3-vNJ"/>
+                <constraint firstItem="AsA-jw-kkh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Dhk-40-xat"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ptU-Tq-REd" secondAttribute="trailing" id="JY7-tL-Lih"/>
+                <constraint firstItem="ptU-Tq-REd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Le6-dh-C6O"/>
+                <constraint firstItem="AsA-jw-kkh" firstAttribute="top" secondItem="ptU-Tq-REd" secondAttribute="bottom" id="Lx6-Rz-VmS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AsA-jw-kkh" secondAttribute="trailing" id="YyA-Hp-TBT"/>
+                <constraint firstItem="ptU-Tq-REd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="cYB-dv-hD9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RiceView">
+            <connections>
+                <outlet property="currentLayerLabel" destination="U6S-hE-tGL" id="9om-yI-h9t"/>
+                <outlet property="currentLayerLabelHeightConstraint" destination="hId-N5-4eF" id="Hsb-4d-5uY"/>
+                <outlet property="tableView" destination="RKW-sU-fCO" id="i9y-2W-ONH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RKW-sU-fCO">
+                    <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6S-hE-tGL">
+                    <rect key="frame" x="10" y="0.0" width="37.5" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hId-N5-4eF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.64313725489999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RKW-sU-fCO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Olo-VW-sDp"/>
+                <constraint firstItem="RKW-sU-fCO" firstAttribute="top" secondItem="U6S-hE-tGL" secondAttribute="bottom" id="eb3-L1-zM4"/>
+                <constraint firstItem="U6S-hE-tGL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="ndd-Lc-FcY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RKW-sU-fCO" secondAttribute="bottom" id="tBr-KL-g8E"/>
+                <constraint firstItem="U6S-hE-tGL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="unw-dj-jDF"/>
+                <constraint firstItem="RKW-sU-fCO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xG8-4c-ejD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

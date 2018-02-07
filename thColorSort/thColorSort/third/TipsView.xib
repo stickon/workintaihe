@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TipsView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V0x-5L-Iai">
+                    <rect key="frame" x="88" y="30" width="200" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="77D-jm-MpD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ga-0K-PPT">
+                    <rect key="frame" x="237.5" y="92" width="60" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.64313725489999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="4bs-x5-0v2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urx-vJ-Ncv">
+                    <rect key="frame" x="77.5" y="92" width="60" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.64313725489999995" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="8ua-uc-s39"/>
+                        <constraint firstAttribute="height" constant="30" id="moB-8L-BRl"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="gKg-k4-zZn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZM-gx-AwE">
+                    <rect key="frame" x="165" y="92" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Gmq-Gl-0VT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="urx-vJ-Ncv" firstAttribute="height" secondItem="3Ga-0K-PPT" secondAttribute="height" id="5Nu-De-wM2"/>
+                <constraint firstItem="3Ga-0K-PPT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="80" id="8C6-FJ-Ok6"/>
+                <constraint firstItem="gZM-gx-AwE" firstAttribute="centerY" secondItem="urx-vJ-Ncv" secondAttribute="centerY" id="OV1-ZV-ME7"/>
+                <constraint firstItem="3Ga-0K-PPT" firstAttribute="centerY" secondItem="urx-vJ-Ncv" secondAttribute="centerY" id="SER-BY-K6l"/>
+                <constraint firstItem="urx-vJ-Ncv" firstAttribute="width" secondItem="3Ga-0K-PPT" secondAttribute="width" id="Uvd-hw-2x5"/>
+                <constraint firstItem="urx-vJ-Ncv" firstAttribute="top" secondItem="V0x-5L-Iai" secondAttribute="bottom" constant="44" id="WBr-2z-Tg0"/>
+                <constraint firstItem="V0x-5L-Iai" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="gGY-LV-e99"/>
+                <constraint firstItem="gZM-gx-AwE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jqi-ZC-KMy"/>
+                <constraint firstItem="V0x-5L-Iai" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pXO-Of-siP"/>
+                <constraint firstItem="urx-vJ-Ncv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-80" id="rOq-yp-QIM"/>
+            </constraints>
+            <connections>
+                <outlet property="cancelbtn" destination="urx-vJ-Ncv" id="V7X-xt-y5l"/>
+                <outlet property="okbtn" destination="3Ga-0K-PPT" id="za7-3Z-HCf"/>
+                <outlet property="showInfobtn" destination="gZM-gx-AwE" id="TFD-uv-dA4"/>
+                <outlet property="tipsTitleLabel" destination="V0x-5L-Iai" id="9gL-Xf-eSW"/>
+            </connections>
+            <point key="canvasLocation" x="-79" y="33"/>
+        </view>
+    </objects>
+</document>

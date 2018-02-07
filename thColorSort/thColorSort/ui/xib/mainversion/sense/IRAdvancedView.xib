@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IRColorAdvancedView">
+            <connections>
+                <outlet property="UseSwitch" destination="2pj-So-rHN" id="PPO-xU-M0e"/>
+                <outlet property="tableView" destination="12p-OQ-ABB" id="Udb-lJ-qJf"/>
+                <outlet property="useLabel" destination="cwN-5b-DF5" id="P7o-Yw-yts"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2pj-So-rHN">
+                    <rect key="frame" x="281" y="8" width="51" height="31"/>
+                    <color key="onTintColor" red="0.00226338231" green="0.69866985079999999" blue="0.70966190100000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="useSwitchValueChanged:" destination="-1" eventType="valueChanged" id="ykW-O3-8Bb"/>
+                    </connections>
+                </switch>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="12p-OQ-ABB">
+                    <rect key="frame" x="0.0" y="49" width="375" height="618"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使能" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwN-5b-DF5">
+                    <rect key="frame" x="20" y="15" width="59" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="59" id="i2Y-SN-bJ3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.00226338231" green="0.69866985079999999" blue="0.70966190100000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2pj-So-rHN" secondAttribute="trailing" constant="45" id="2dX-5C-Yoi"/>
+                <constraint firstItem="12p-OQ-ABB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="4Dz-ZX-NaZ"/>
+                <constraint firstItem="12p-OQ-ABB" firstAttribute="top" secondItem="2pj-So-rHN" secondAttribute="bottom" constant="10" id="9JJ-dG-DGa"/>
+                <constraint firstItem="12p-OQ-ABB" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="IyG-dB-OGp"/>
+                <constraint firstItem="12p-OQ-ABB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JMr-hl-ZLg"/>
+                <constraint firstItem="2pj-So-rHN" firstAttribute="centerY" secondItem="cwN-5b-DF5" secondAttribute="centerY" id="Scb-sn-wFu"/>
+                <constraint firstItem="cwN-5b-DF5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="YRT-Pw-Ola"/>
+                <constraint firstItem="cwN-5b-DF5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fFH-dY-TJW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

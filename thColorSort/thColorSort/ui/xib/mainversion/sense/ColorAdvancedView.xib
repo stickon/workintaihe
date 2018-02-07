@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorAdvancedView">
+            <connections>
+                <outlet property="UseSwitch" destination="FGO-CQ-pxh" id="ooM-Cf-JAq"/>
+                <outlet property="tableView" destination="INk-zs-v2I" id="pND-6w-Uc4"/>
+                <outlet property="useLabel" destination="gI1-yr-GFE" id="gYP-vM-cTv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="INk-zs-v2I">
+                    <rect key="frame" x="0.0" y="49" width="375" height="618"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FGO-CQ-pxh">
+                    <rect key="frame" x="281" y="8" width="51" height="31"/>
+                    <color key="onTintColor" red="0.00226338231" green="0.69866985079999999" blue="0.70966190100000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="useSwitchValueChanged:" destination="-1" eventType="valueChanged" id="Ldc-Ov-7Xf"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使能" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI1-yr-GFE">
+                    <rect key="frame" x="20" y="15" width="59" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="59" id="Swu-OH-7mi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.00226338231" green="0.69866985079999999" blue="0.70966190100000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FGO-CQ-pxh" firstAttribute="centerY" secondItem="gI1-yr-GFE" secondAttribute="centerY" id="Aad-2U-bXl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="INk-zs-v2I" secondAttribute="bottom" id="OzC-64-Nwt"/>
+                <constraint firstItem="INk-zs-v2I" firstAttribute="top" secondItem="FGO-CQ-pxh" secondAttribute="bottom" constant="10" id="aDH-5c-2t4"/>
+                <constraint firstItem="INk-zs-v2I" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="cGn-3v-P0B"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="INk-zs-v2I" secondAttribute="trailing" id="m7g-7E-R3X"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FGO-CQ-pxh" secondAttribute="trailing" constant="45" id="ngB-ca-Vek"/>
+                <constraint firstItem="gI1-yr-GFE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="uKg-3U-SPL"/>
+                <constraint firstItem="gI1-yr-GFE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="yWV-2u-taB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="274.5" y="-36.5"/>
+        </view>
+    </objects>
+</document>
