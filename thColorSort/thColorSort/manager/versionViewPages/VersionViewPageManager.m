@@ -9,6 +9,7 @@
 #import "VersionViewPageManager.h"
 #import "Version31ViewPages.h"
 #import "Version21ViewPages.h"
+#import "RiceUserVersion20ViewPages.h"
 #import "DataModel.h"
 #import "types.h"
 @implementation VersionViewPageManager
@@ -28,11 +29,18 @@
     return _curVersionViewPages;
 }
 
--(void) setPages{
-    if (kDataModel.currentDevice->screenProtocolMainVersion == 2||kDataModel.currentDevice->screenProtocolMinVersion ==0) {
-        _curVersionViewPages = [[Version21ViewPages alloc] init];
-    }else if (kDataModel.currentDevice->screenProtocolMainVersion == 3||kDataModel.currentDevice->screenProtocolMinVersion ==1){
-        _curVersionViewPages = [[Version31ViewPages alloc] init];
+-(void)setPages{
+    if (kDataModel.currentDevice->screenProtocolType) {
+        if (kDataModel.currentDevice->screenProtocolMainVersion == 2&&kDataModel.currentDevice->screenProtocolMinVersion ==0) {
+            _curVersionViewPages = [[RiceUserVersion20ViewPages alloc] init];
+        }
+    }else{
+        if (kDataModel.currentDevice->screenProtocolMainVersion == 2&&kDataModel.currentDevice->screenProtocolMinVersion ==0) {
+            _curVersionViewPages = [[Version21ViewPages alloc] init];
+        }else if (kDataModel.currentDevice->screenProtocolMainVersion == 3 && kDataModel.currentDevice->screenProtocolMinVersion ==1){
+            _curVersionViewPages = [[Version31ViewPages alloc] init];
+        }
     }
+    
 }
 @end

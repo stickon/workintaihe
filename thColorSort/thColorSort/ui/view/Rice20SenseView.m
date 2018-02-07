@@ -7,7 +7,8 @@
 //
 
 #import "Rice20SenseView.h"
-@interface Rice20SenseView()<UITableViewDelegate,UITableViewDataSource>
+#import "RiceUserAlgorithmTableViewCell.h"
+@interface Rice20SenseView()<UITableViewDelegate,UITableViewDataSource,TableViewCellChangedDelegate>
 
 @property (nonatomic,strong) NSIndexPath* selectIndexPath;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -21,13 +22,14 @@
 -(instancetype)init{
     self=[super init];
     if(self){
-        UIView *subView=[[[NSBundle mainBundle] loadNibNamed:@"ColorAlgorithmView" owner:self options:nil] firstObject];
+        UIView *subView=[[[NSBundle mainBundle] loadNibNamed:@"Rice20SenseView" owner:self options:nil] firstObject];
         [self addSubview:subView];
         [self autoLayout:subView superView:self];
-        self.tableView.mj_header = self.refreshHeader;
+//        self.tableView.mj_header = self.refreshHeader;
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self initView];
         Device *device = kDataModel.currentDevice;
         if (device->machineData.layerNumber>1) {
@@ -43,7 +45,7 @@
 }
 
 -(UIView*)getViewWithPara:(NSDictionary *)para{
-    [[NetworkFactory sharedNetWork]sendToGetDataIsIR:0];
+    [self refreshCurrentView];
     return self;
 }
 - (void)initView{
@@ -74,12 +76,12 @@
 }
 
 -(void)refreshCurrentView{
-    [[NetworkFactory sharedNetWork]sendToGetDataIsIR:0];
+    [[NetworkFactory sharedNetWork]sendToGetRiceUserSense];
 }
 
 -(void)updateWithHeader:(NSData *)headerData{
     const unsigned char* a = headerData.bytes;
-    if (a[0] == 0x04 && a[1] == 0x01) {
+    if (a[0] == 0x04 && a[1] == 0x21) {
         [self.tableView.mj_header endRefreshing];
         [self.tableView reloadData];
     }else if (a[0] == 0x55){
@@ -97,7 +99,7 @@
 {
     kDataModel.currentDevice.currentLayerIndex = layer;
     kDataModel.currentDevice.currentViewIndex = 0;
-    [[NetworkFactory sharedNetWork]sendToGetDataIsIR:0];
+    [self refreshCurrentView];
 }
 
 #pragma tableview data source
@@ -111,13 +113,13 @@
     return 1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return 90.5;
 }
 -(NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
     Device *device = kDataModel.currentDevice;
     if (device->machineData.useColor) {
-        return device.colorAlgorithmNums;
+        return device.userAlgorithmNums;
     }
     return 0;
 }
@@ -127,34 +129,35 @@
     Device *device = kDataModel.currentDevice;
     
     if (device->machineData.useColor) {
-        if (indexPath.row<device.colorAlgorithmNums) {
-            static NSString *cellIdentifier = @"TableViewCellWithDefaultTitleLabel1TextField";
-            TableViewCellWithDefaultTitleLabel1TextField *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (indexPath.row<device.userAlgorithmNums) {
+            static NSString *cellIdentifier = @"RiceUserAlgorithmTableViewCell";
+            RiceUserAlgorithmTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
             if (cell == nil) {
                 cell = [[[NSBundle mainBundle]loadNibNamed:cellIdentifier owner:self options:nil]lastObject];
             }
             cell.textLabel.font = SYSTEMFONT_14f;
-            if ((*(device->colorAlgorithm+indexPath.row)).used) {
-                cell.textLabel.textColor = [UIColor redColor];
-                cell.textField.enabled = YES;
+            if ((*(device->riceUserAlgorithm+indexPath.row)).used) {
+                [cell.riceUserAlgorithmUseSwitch setOn:YES];
             }else{
-                cell.textLabel.textColor = [UIColor blackColor];
-                cell.textField.enabled = NO;
+                [cell.riceUserAlgorithmUseSwitch setOn:NO];
             }
-            cell.textLabel.text =[NSString stringWithUTF8String:(*(device->colorAlgorithm+indexPath.row)).name];
-            NSInteger sense = ((*(device->colorAlgorithm+indexPath.row)).sense[0])*256+(*(device->colorAlgorithm+indexPath.row)).sense[1];
-            cell.textField.text = [NSString stringWithFormat:@"%lu",(long)sense];
+            cell.riceUserAlgorithmUseSwitch.tag = 5;
+            cell.riceUserAlgorithmNameLabel.text =[NSString stringWithUTF8String:(*(device->riceUserAlgorithm+indexPath.row)).name];
+          
+            for (int i = 0; i < device->groupNum; i++) {
+                NSInteger sense = ((*(device->riceUserAlgorithm+indexPath.row)).sense[i][0])*256+(*(device->riceUserAlgorithm+indexPath.row)).sense[i][1];
+                cell.groupTextFieldArray[i].text = [NSString stringWithFormat:@"%lu",(long)sense];
+                cell.groupTextFieldArray[i].hidden = NO;
+                cell.groupTextFieldArray[i].tag = i;
+                cell.groupTextFieldArray[i].font = SYSTEMFONT_14f;
+            }
+           
             cell.indexPath = indexPath;
-            cell.textField.tag = indexPath.section*1000+indexPath.row+1;
-            cell.textField.font = SYSTEMFONT_14f;
             cell.delegate = self;
-            if ((*(device->colorAlgorithm+indexPath.row)).type < 4 || (*(device->colorAlgorithm+indexPath.row)).type == 6) {
-                cell.cellType = TableViewCellType_SenseType;
-            }else{
-                cell.cellType = TableViewCellType_ColorSense;
+            if ((cell.indexPath.row)%2 == 0) {
+                cell.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0];
             }
-            
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.accessoryType = UITableViewCellAccessoryNone;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
@@ -162,24 +165,7 @@
     UITableViewCell *defaultCell = [[UITableViewCell alloc]init];
     return defaultCell;
 }
-#pragma mark - tableviewdelegate
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
-{
-    _selectIndexPath = indexPath;
-    Device *device = kDataModel.currentDevice;
-    
-    [self.paraNextView setObject:[NSString stringWithUTF8String:(*(device->colorAlgorithm+_selectIndexPath.row)).name]forKey:@"title"];
-    [self.paraNextView setObject:[NSString stringWithFormat:@"%ld",(long)self.selectIndexPath.row] forKey:@"algorithmIndex"];
-    if((*(device->colorAlgorithm+_selectIndexPath.row)).type<4){
-        [[MiddleManager shareInstance] ChangeViewWithName:@"ColorAdvancedView" Para:self.paraNextView];
-        
-    }else if ((*(device->colorAlgorithm+_selectIndexPath.row)).type == 6){
-        [[MiddleManager shareInstance] ChangeViewWithName:@"RestrainAdvancedView" Para:self.paraNextView];
-    }else{
-        [[MiddleManager shareInstance] ChangeViewWithName:@"DiffAdvancedView"Para:self.paraNextView];
-    }
-}
 
 
 #pragma celldatachangeddelegate
@@ -187,13 +173,11 @@
 -(void)cellValueChangedWithSection:(long)section row:(long)row tag:(long)index value:(NSInteger)value
 {
     Device *device = kDataModel.currentDevice;
-    NSUInteger oldValue =((*(device->colorAlgorithm+row)).sense[0])*256+(*(device->colorAlgorithm+row)).sense[1];
-    if((NSUInteger)value >oldValue){
-        [[NetworkFactory sharedNetWork]sendAlgorithmSenseValueWithAjustType:1 Sorter:0 data:value-oldValue algorithmType:(*(device->colorAlgorithm+row)).type FirstSecond:0 ValueType:1 IsIR:0];
+    if (index>4) {
+        [[NetworkFactory sharedNetWork] sendToSetRiceUserSenseUseWithType:(*(device->riceUserAlgorithm+row)).type Value:value];
     }else{
-        [[NetworkFactory sharedNetWork]sendAlgorithmSenseValueWithAjustType:2 Sorter:0 data:oldValue-value algorithmType:(*(device->colorAlgorithm+row)).type FirstSecond:0 ValueType:1 IsIR:0];
+        [[NetworkFactory sharedNetWork] sendToSetRiceUserSenseWithType:(*(device->riceUserAlgorithm+row)).type GroupIndex:index RowIndex:(Byte)row Value:(int)value];
     }
-    
 }
 
 
@@ -201,11 +185,11 @@
 -(void)didSelectLayerIndex:(Byte)layerIndex{
     [super didSelectLayerIndex:layerIndex];
     [self initView];
-    [[NetworkFactory sharedNetWork]sendToGetDataIsIR:0];
+    [self refreshCurrentView];
 }
 
 - (void)frontRearViewChanged{
     [[NetworkFactory sharedNetWork] changeLayerAndView];
-    [[NetworkFactory sharedNetWork]sendToGetDataIsIR:0];
+    [self refreshCurrentView];
 }
 @end

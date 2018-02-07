@@ -23,6 +23,7 @@
 #define SYSTEMFONT_14f   [UIFont systemFontOfSize:14.0f]
 #define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
 
+//#define Engineer //工程师版本
 
 //机器类型
 typedef NS_ENUM(Byte,MachineType) {

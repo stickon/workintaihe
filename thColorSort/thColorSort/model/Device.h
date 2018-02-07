@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "types.h"
-//#define Engineer //工程师版本
+
 
 typedef struct
 {
@@ -319,6 +319,7 @@ typedef struct{
     MachineData machineData;
     ColorAlgorithm *colorAlgorithm;
     ColorAlgorithm *irAlgorithm;
+    RiceUserAlgorithm *riceUserAlgorithm;
     Sense sense;
     RiceSense riceSense;
     Byte reverse;//镜像   0 无  1 有
@@ -413,6 +414,8 @@ typedef struct{
 @property (nonatomic,strong) NSString *modeName;//用于首页显示的当前方案名称
 @property (nonatomic,assign) NSInteger colorAlgorithmNums;
 @property (nonatomic,assign) NSInteger irAlogrithmNum;
+
+@property (nonatomic,assign) NSInteger userAlgorithmNums;//用户版本显示的算法数量
 @property (nonatomic,assign) Byte currentLayerIndex;
 @property (nonatomic,assign) Byte currentSorterIndex;
 @property (nonatomic,assign) Byte currentViewIndex;

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "types.h"
 @interface BaseVersionViewPages : NSObject
 @property(nonatomic,strong) NSMutableDictionary *VersionViewNameToClassDictionary;
 -(void)createPage;

@@ -247,6 +247,9 @@
 		F0ACB12E200C8E5E005B538D /* ValveShowInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0ACB12D200C8E5E005B538D /* ValveShowInfoView.xib */; };
 		F0ACB130200CA203005B538D /* SelectItemTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0ACB12F200CA203005B538D /* SelectItemTableView.xib */; };
 		F0ACB133200CA288005B538D /* SelectItemTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0ACB132200CA288005B538D /* SelectItemTableView.m */; };
+		F0C0EB0C202AAA180091F265 /* RiceUserAlgorithmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C0EB0A202AAA180091F265 /* RiceUserAlgorithmTableViewCell.m */; };
+		F0C0EB0D202AAA190091F265 /* RiceUserAlgorithmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C0EB0B202AAA180091F265 /* RiceUserAlgorithmTableViewCell.xib */; };
+		F0C0EB10202AD5DA0091F265 /* RiceUserVersion20ViewPages.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C0EB0F202AD5DA0091F265 /* RiceUserVersion20ViewPages.m */; };
 		F0C37C61200D853900C4BAFA /* ModeSet31View.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C37C60200D853900C4BAFA /* ModeSet31View.m */; };
 		F0C37C63200D907200C4BAFA /* ModeSet31View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C37C62200D907200C4BAFA /* ModeSet31View.xib */; };
 		F0C37C66200DE8E500C4BAFA /* ValveSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C37C65200DE8E500C4BAFA /* ValveSetView.m */; };
@@ -679,6 +682,11 @@
 		F0ACB12F200CA203005B538D /* SelectItemTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectItemTableView.xib; sourceTree = "<group>"; };
 		F0ACB131200CA288005B538D /* SelectItemTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectItemTableView.h; sourceTree = "<group>"; };
 		F0ACB132200CA288005B538D /* SelectItemTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectItemTableView.m; sourceTree = "<group>"; };
+		F0C0EB09202AAA180091F265 /* RiceUserAlgorithmTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RiceUserAlgorithmTableViewCell.h; sourceTree = "<group>"; };
+		F0C0EB0A202AAA180091F265 /* RiceUserAlgorithmTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiceUserAlgorithmTableViewCell.m; sourceTree = "<group>"; };
+		F0C0EB0B202AAA180091F265 /* RiceUserAlgorithmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiceUserAlgorithmTableViewCell.xib; sourceTree = "<group>"; };
+		F0C0EB0E202AD5DA0091F265 /* RiceUserVersion20ViewPages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RiceUserVersion20ViewPages.h; sourceTree = "<group>"; };
+		F0C0EB0F202AD5DA0091F265 /* RiceUserVersion20ViewPages.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiceUserVersion20ViewPages.m; sourceTree = "<group>"; };
 		F0C37C5F200D853900C4BAFA /* ModeSet31View.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModeSet31View.h; sourceTree = "<group>"; };
 		F0C37C60200D853900C4BAFA /* ModeSet31View.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModeSet31View.m; sourceTree = "<group>"; };
 		F0C37C62200D907200C4BAFA /* ModeSet31View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModeSet31View.xib; sourceTree = "<group>"; };
@@ -1017,6 +1025,8 @@
 				F090522D1FFB4D80003CEE84 /* TopManager.h */,
 				F090522C1FFB4D80003CEE84 /* TopManager.m */,
 				F090522F1FFB4D80003CEE84 /* TopView.xib */,
+				F0C0EB0E202AD5DA0091F265 /* RiceUserVersion20ViewPages.h */,
+				F0C0EB0F202AD5DA0091F265 /* RiceUserVersion20ViewPages.m */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -1265,6 +1275,9 @@
 				F09051841FFB49FA003CEE84 /* WaveDataTableViewCell.h */,
 				F09051831FFB49FA003CEE84 /* WaveDataTableViewCell.m */,
 				F09051541FFB49F4003CEE84 /* WaveDataTableViewCell.xib */,
+				F0C0EB09202AAA180091F265 /* RiceUserAlgorithmTableViewCell.h */,
+				F0C0EB0A202AAA180091F265 /* RiceUserAlgorithmTableViewCell.m */,
+				F0C0EB0B202AAA180091F265 /* RiceUserAlgorithmTableViewCell.xib */,
 			);
 			path = tableviewcell;
 			sourceTree = "<group>";
@@ -1862,6 +1875,7 @@
 				F09050CC1FFB335D003CEE84 /* Main.storyboard in Resources */,
 				F090519B1FFB49FA003CEE84 /* TableViewCellWith2SegmentControl.xib in Resources */,
 				F09051C91FFB49FB003CEE84 /* ColorSenseValueAndLightValueTableViewCell.xib in Resources */,
+				F0C0EB0D202AAA190091F265 /* RiceUserAlgorithmTableViewCell.xib in Resources */,
 				F09051981FFB49FA003CEE84 /* valveTableViewCell.xib in Resources */,
 				F03207292010795E003EDF83 /* GreenTeaShortStemView.xib in Resources */,
 				F09051881FFB49FA003CEE84 /* FeedSettingTitleTableViewCell.xib in Resources */,
@@ -2001,12 +2015,14 @@
 				F01492F6201EFCE800E946F8 /* IRAlgorithmView.m in Sources */,
 				F09051CB1FFB49FB003CEE84 /* ColorDiffTypeAndReverseTitleTableViewCell.m in Sources */,
 				F0ACB113200C8682005B538D /* SoftwareVersionView.m in Sources */,
+				F0C0EB10202AD5DA0091F265 /* RiceUserVersion20ViewPages.m in Sources */,
 				F09052761FFB500D003CEE84 /* InternationalControl.m in Sources */,
 				F09051BE1FFB49FA003CEE84 /* DownloadTableViewCell.m in Sources */,
 				F0E5A3E81FFC86C30056E946 /* MJRefreshBackNormalFooter.m in Sources */,
 				F0ACB10B200C7523005B538D /* LanguageSettingView.m in Sources */,
 				F090520E1FFB4A08003CEE84 /* ColorAdvanced31View.m in Sources */,
 				F09052521FFB4DCA003CEE84 /* Network.m in Sources */,
+				F0C0EB0C202AAA180091F265 /* RiceUserAlgorithmTableViewCell.m in Sources */,
 				F09052351FFB4D81003CEE84 /* BottomManager.m in Sources */,
 				F090518A1FFB49FA003CEE84 /* TableViewCellWithDefaultTitleLabel1TextField.m in Sources */,
 				F090524F1FFB4DCA003CEE84 /* NetWorkReSend.m in Sources */,

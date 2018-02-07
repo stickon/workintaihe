@@ -240,10 +240,24 @@
     sense.group = group;
     sense.index = index;
     sense.data[0] = value/256;
-    sense.data[0] = value%256;
+    sense.data[1] = value%256;
     memcpy(socketHeader.data1, (const void*)&sense,sizeof(RiceUserSense));
     [self netWorkSendData];
 }
+-(void)sendToSetRiceUserSenseUseWithType:(Byte)type Value:(Byte)value{
+    Device *device = kDataModel.currentDevice;
+    [self initSocketHeader];
+    socketHeader.type = 0x04;
+    socketHeader.extendType = 0x24;
+    SenseUse senseUse;
+    memset(&senseUse, 0, sizeof(SenseUse));
+    senseUse.Algorithm = type;
+    senseUse.layer = device.currentLayerIndex;
+    senseUse.view = device.currentViewIndex;
+    memcpy(socketHeader.data1,(const void*)&senseUse,sizeof(SenseUse));
+    [self netWorkSendData];
+}
+
 #pragma mark sense AdvancedController
 -(void)sendToGetSenseAdvancedData:(Byte)type IsIR:(Byte)isIR
 {

@@ -284,6 +284,18 @@ static DataModel *model = nil;
                         device->irSharpenValue = a[6];
                     }
                 }
+                if (a[1] == 0x21) {
+                    if (a[2]) {
+                        device.userAlgorithmNums = (data.length-Socket_Header_Length)/sizeof(RiceUserAlgorithm);
+                        if(device->riceUserAlgorithm){
+                            free(device->riceUserAlgorithm);
+                        }
+                        device->riceUserAlgorithm = malloc(data.length-Socket_Header_Length);
+                        memcpy(device->riceUserAlgorithm, a+Socket_Header_Length, data.length-Socket_Header_Length);
+                    }else{
+                        device.userAlgorithmNums = 0;
+                    }
+                }
             }
         }
             break;

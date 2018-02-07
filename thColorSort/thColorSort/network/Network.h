@@ -132,6 +132,7 @@ typedef struct WaveSendType
 //大米用户版本灵敏度
 -(void)sendToGetRiceUserSense;
 -(void)sendToSetRiceUserSenseWithType:(Byte)type GroupIndex:(Byte)group RowIndex:(Byte)index Value:(int)value;
+-(void)sendToSetRiceUserSenseUseWithType:(Byte)type Value:(Byte)value;
 #pragma mark color ir AdvancedController
 -(void)sendToGetSenseAdvancedData:(Byte)type IsIR:(Byte)isIR;
 -(void)sendToChangeSizeWithAlgorithmType:(Byte)algorithmType Type:(Byte)type AndValue:(NSInteger)value IsIR:(Byte)isIR;//set size

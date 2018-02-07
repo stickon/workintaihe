@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="KGk-i7-Jjw" customClass="RiceUserAlgorithmTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhG-NT-4QY">
+                        <rect key="frame" x="16" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tiw-qa-Ovm" customClass="BaseUITextField">
+                        <rect key="frame" x="16" y="45" width="63.5" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="myTextFieldDidBegin:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="4jU-8I-hTR"/>
+                        </connections>
+                    </textField>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEN-Xq-s8Y">
+                        <rect key="frame" x="310" y="6" width="51" height="31"/>
+                        <connections>
+                            <action selector="switchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="LBZ-IX-Zo9"/>
+                        </connections>
+                    </switch>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p2w-2Q-FYL" customClass="BaseUITextField">
+                        <rect key="frame" x="109.5" y="45" width="63" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="myTextFieldDidBegin:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="BLO-TS-exJ"/>
+                        </connections>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-Ea-BAY" customClass="BaseUITextField">
+                        <rect key="frame" x="296" y="45" width="63" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="myTextFieldDidBegin:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="xKt-pS-ykX"/>
+                        </connections>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-Ia-vNo" customClass="BaseUITextField">
+                        <rect key="frame" x="202.5" y="45" width="63.5" height="30"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <action selector="myTextFieldDidBegin:" destination="KGk-i7-Jjw" eventType="editingDidBegin" id="rrq-7G-983"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="Tiw-qa-Ovm" secondAttribute="bottom" constant="5" id="68a-LB-HVo"/>
+                    <constraint firstItem="hJW-Ia-vNo" firstAttribute="width" secondItem="bb8-Ea-BAY" secondAttribute="width" id="CyK-7o-qzt"/>
+                    <constraint firstItem="tEN-Xq-s8Y" firstAttribute="centerY" secondItem="XhG-NT-4QY" secondAttribute="centerY" id="Epq-uc-9XB"/>
+                    <constraint firstItem="XhG-NT-4QY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="H79-8L-DEM"/>
+                    <constraint firstItem="bb8-Ea-BAY" firstAttribute="leading" secondItem="hJW-Ia-vNo" secondAttribute="trailing" constant="30" id="Hsg-wQ-g5A"/>
+                    <constraint firstItem="XhG-NT-4QY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="KIE-So-1Bj"/>
+                    <constraint firstItem="p2w-2Q-FYL" firstAttribute="centerY" secondItem="Tiw-qa-Ovm" secondAttribute="centerY" id="OeP-J1-GPE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tEN-Xq-s8Y" secondAttribute="trailing" id="PZp-3p-W3A"/>
+                    <constraint firstItem="Tiw-qa-Ovm" firstAttribute="width" secondItem="p2w-2Q-FYL" secondAttribute="width" id="QSF-8s-cvZ"/>
+                    <constraint firstItem="p2w-2Q-FYL" firstAttribute="leading" secondItem="Tiw-qa-Ovm" secondAttribute="trailing" constant="30" id="SJw-nf-R0I"/>
+                    <constraint firstItem="bb8-Ea-BAY" firstAttribute="centerY" secondItem="Tiw-qa-Ovm" secondAttribute="centerY" id="g0G-qD-uFs"/>
+                    <constraint firstItem="hJW-Ia-vNo" firstAttribute="leading" secondItem="p2w-2Q-FYL" secondAttribute="trailing" constant="30" id="o7i-3q-m74"/>
+                    <constraint firstItem="Tiw-qa-Ovm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="qAh-Br-Qt0"/>
+                    <constraint firstItem="p2w-2Q-FYL" firstAttribute="width" secondItem="hJW-Ia-vNo" secondAttribute="width" id="svh-BU-Sf5"/>
+                    <constraint firstItem="hJW-Ia-vNo" firstAttribute="centerY" secondItem="Tiw-qa-Ovm" secondAttribute="centerY" id="yaT-in-HJo"/>
+                    <constraint firstItem="bb8-Ea-BAY" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="zG6-Bn-0Z9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="group1TextField" destination="Tiw-qa-Ovm" id="CIP-dm-aNW"/>
+                <outlet property="group2TextField" destination="p2w-2Q-FYL" id="u2t-Fk-OO7"/>
+                <outlet property="group3TextField" destination="hJW-Ia-vNo" id="8TF-ge-emK"/>
+                <outlet property="group4TextField" destination="bb8-Ea-BAY" id="Dj1-9o-UKo"/>
+                <outlet property="riceUserAlgorithmNameLabel" destination="XhG-NT-4QY" id="8Ah-K9-UPi"/>
+                <outlet property="riceUserAlgorithmUseSwitch" destination="tEN-Xq-s8Y" id="qtL-XS-hlO"/>
+            </connections>
+            <point key="canvasLocation" x="-53" y="-361"/>
+        </tableViewCell>
+    </objects>
+</document>

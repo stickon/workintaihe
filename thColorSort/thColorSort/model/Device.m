@@ -21,6 +21,7 @@
         self.currentViewIndex = 0;
         colorAlgorithm = NULL;
         irAlgorithm = NULL;
+        riceUserAlgorithm = NULL;
         self->data1 = NULL;
         self->data2 = NULL;
         self->data3 = NULL;
@@ -78,6 +79,7 @@
     free(vibSwitch);
     free(colorAlgorithm);
     free(irAlgorithm);
+    free(riceUserAlgorithm);
 }
 - (BOOL)bHaveChuteUseReverse { 
     if (data4) {
