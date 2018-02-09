@@ -13,21 +13,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="KGk-i7-Jjw" customClass="RiceUserAlgorithmTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="91"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="101" id="KGk-i7-Jjw" customClass="RiceUserAlgorithmTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="101"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhG-NT-4QY">
-                        <rect key="frame" x="16" y="11" width="42" height="21"/>
+                        <rect key="frame" x="16" y="16" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tiw-qa-Ovm" customClass="BaseUITextField">
-                        <rect key="frame" x="16" y="45" width="63.5" height="30"/>
+                        <rect key="frame" x="16" y="55" width="63.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -36,13 +36,13 @@
                         </connections>
                     </textField>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEN-Xq-s8Y">
-                        <rect key="frame" x="310" y="6" width="51" height="31"/>
+                        <rect key="frame" x="310" y="11" width="51" height="31"/>
                         <connections>
                             <action selector="switchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="LBZ-IX-Zo9"/>
                         </connections>
                     </switch>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p2w-2Q-FYL" customClass="BaseUITextField">
-                        <rect key="frame" x="109.5" y="45" width="63" height="30"/>
+                        <rect key="frame" x="109.5" y="55" width="63" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -51,7 +51,7 @@
                         </connections>
                     </textField>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-Ea-BAY" customClass="BaseUITextField">
-                        <rect key="frame" x="296" y="45" width="63" height="30"/>
+                        <rect key="frame" x="296" y="55" width="63" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -60,7 +60,7 @@
                         </connections>
                     </textField>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJW-Ia-vNo" customClass="BaseUITextField">
-                        <rect key="frame" x="202.5" y="45" width="63.5" height="30"/>
+                        <rect key="frame" x="202.5" y="55" width="63.5" height="30"/>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -75,7 +75,7 @@
                     <constraint firstItem="tEN-Xq-s8Y" firstAttribute="centerY" secondItem="XhG-NT-4QY" secondAttribute="centerY" id="Epq-uc-9XB"/>
                     <constraint firstItem="XhG-NT-4QY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="H79-8L-DEM"/>
                     <constraint firstItem="bb8-Ea-BAY" firstAttribute="leading" secondItem="hJW-Ia-vNo" secondAttribute="trailing" constant="30" id="Hsg-wQ-g5A"/>
-                    <constraint firstItem="XhG-NT-4QY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="KIE-So-1Bj"/>
+                    <constraint firstItem="XhG-NT-4QY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="KIE-So-1Bj"/>
                     <constraint firstItem="p2w-2Q-FYL" firstAttribute="centerY" secondItem="Tiw-qa-Ovm" secondAttribute="centerY" id="OeP-J1-GPE"/>
                     <constraint firstAttribute="trailingMargin" secondItem="tEN-Xq-s8Y" secondAttribute="trailing" id="PZp-3p-W3A"/>
                     <constraint firstItem="Tiw-qa-Ovm" firstAttribute="width" secondItem="p2w-2Q-FYL" secondAttribute="width" id="QSF-8s-cvZ"/>
@@ -97,7 +97,7 @@
                 <outlet property="riceUserAlgorithmNameLabel" destination="XhG-NT-4QY" id="8Ah-K9-UPi"/>
                 <outlet property="riceUserAlgorithmUseSwitch" destination="tEN-Xq-s8Y" id="qtL-XS-hlO"/>
             </connections>
-            <point key="canvasLocation" x="-53" y="-361"/>
+            <point key="canvasLocation" x="-53.5" y="-356.5"/>
         </tableViewCell>
     </objects>
 </document>

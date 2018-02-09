@@ -7,6 +7,7 @@
 //
 
 #import "RiceUserAlgorithmTableViewCell.h"
+static NSInteger g_areaMapMaxSize[16] = {1,9,25,49,81,121,169,225,289,323,357,391,425,459,493,100};
 @interface RiceUserAlgorithmTableViewCell()<MyTextFieldDelegate>
 
 @end
@@ -25,6 +26,7 @@
     for (BaseUITextField *obj in self.groupTextFieldArray) {
         obj.hidden = YES;
     }
+    svmRange = (Byte*)malloc(4);
 }
 - (NSMutableArray*)groupTextFieldArray{
     if (!_groupTextFieldArray) {
@@ -42,7 +44,18 @@
 - (IBAction)myTextFieldDidBegin:(BaseUITextField *)sender {
     [sender configInputView];
     sender.mydelegate = self;
-    [sender initKeyboardWithMax:100 Min:1 Value:sender.text.integerValue];
+    if (self.type < 4) {
+        [sender initKeyboardWithMax:100 Min:0 Value:sender.text.integerValue];
+    }else if (self.type < 6){
+         [sender initKeyboardWithMax:199 Min:1 Value:sender.text.integerValue];
+    }else if (self.type == 6){
+        [sender initKeyboardWithMax:g_areaMapMaxSize[svmRange[sender.tag]] Min:1 Value:sender.text.integerValue];
+    }else if (self.type == 7){
+        [sender initKeyboardWithMax:255 Min:1 Value:sender.text.integerValue];
+    }else if (self.type == 8){
+        [sender initKeyboardWithMax:1024 Min:1 Value:sender.text.integerValue];
+    }
+    
 }
 #pragma mark textfield delegate
 -(void)mytextfieldDidEnd:(BaseUITextField *)sender{
@@ -55,5 +68,4 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
 }
-
 @end

@@ -113,7 +113,7 @@
     return 1;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 90.5;
+    return 100.5;
 }
 -(NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -143,7 +143,8 @@
             }
             cell.riceUserAlgorithmUseSwitch.tag = 5;
             cell.riceUserAlgorithmNameLabel.text =[NSString stringWithUTF8String:(*(device->riceUserAlgorithm+indexPath.row)).name];
-          
+            cell->svmRange = (*(device->riceUserAlgorithm+indexPath.row)).range;
+            cell.type = (*(device->riceUserAlgorithm+indexPath.row)).type;
             for (int i = 0; i < device->groupNum; i++) {
                 NSInteger sense = ((*(device->riceUserAlgorithm+indexPath.row)).sense[i][0])*256+(*(device->riceUserAlgorithm+indexPath.row)).sense[i][1];
                 cell.groupTextFieldArray[i].text = [NSString stringWithFormat:@"%lu",(long)sense];
